@@ -20,12 +20,15 @@
     [super viewDidLoad];
     MagicalCreature *pegasusCreature = [[MagicalCreature alloc]init];
     pegasusCreature.name = @"Pegasus";
+    pegasusCreature.detail = @"Air";
 
     MagicalCreature *trollCreature = [[MagicalCreature alloc]init];
     trollCreature.name = @"troll";
+    trollCreature.detail = @"Earth";
 
     MagicalCreature *cerberusCreature = [[MagicalCreature alloc]init];
     cerberusCreature.name = @"Cerberus";
+    cerberusCreature.detail = @"Inferno";
 
     self.creatures = [[NSMutableArray alloc] initWithObjects:pegasusCreature, trollCreature, cerberusCreature, nil];
 }
@@ -44,6 +47,7 @@
 
     MagicalCreature *creature = [self.creatures objectAtIndex:indexPath.row];
     cell.textLabel.text = creature.name;
+    cell.detailTextLabel.text = creature.detail;
 
     return cell;
 }
@@ -52,6 +56,7 @@
     if (![self.creatureTextField.text isEqualToString:@""]) {
         MagicalCreature *creature = [[MagicalCreature alloc] init];
         creature.name = [self.creatureTextField text];
+        creature.detail = @"none";
 
         [self.creatures addObject:creature];
 

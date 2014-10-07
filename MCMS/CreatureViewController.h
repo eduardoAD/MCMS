@@ -13,6 +13,8 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *creatureLabel;
 @property (strong, nonatomic) IBOutlet UITextField *creatureText;
+@property (strong, nonatomic) IBOutlet UILabel *detailLabel;
+@property (strong, nonatomic) IBOutlet UITextField *detailText;
 
 @property (strong, nonatomic) MagicalCreature *creature;
 @property BOOL editButtonToggled;

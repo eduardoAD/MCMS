@@ -19,6 +19,11 @@
     self.creatureLabel.text = self.creature.name;
     self.creatureText.text = self.creature.name;
     self.creatureText.hidden = YES;
+
+    self.detailLabel.text = self.creature.detail;
+    self.detailText.text = self.creature.detail;
+    self.detailText.hidden = YES;
+
     self.editButtonToggled = NO;
 }
 
@@ -31,16 +36,26 @@
     if (!self.editButtonToggled) {
         [sender setTitle:@"Done" forState:UIControlStateNormal];
         self.editButtonToggled = YES;
+
         self.creatureLabel.hidden = YES;
         self.creatureText.hidden = NO;
 
+        self.detailLabel.hidden = YES;
+        self.detailText.hidden = NO;
     }else{
         [sender setTitle:@"Edit" forState:UIControlStateNormal];
         self.editButtonToggled = NO;
+
         self.creatureLabel.hidden = NO;
         self.creatureLabel.text = self.creatureText.text;
         self.creature.name = self.creatureText.text;
+
+        self.detailLabel.hidden = NO;
+        self.detailLabel.text = self.detailText.text;
+        self.creature.detail = self.detailText.text;
+
         self.creatureText.hidden = YES;
+        self.detailText.hidden = YES;
     }
 }
 
