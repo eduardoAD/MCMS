@@ -16,8 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.creatureLabel.text = self.creatureString;
+    self.creatureLabel.text = self.creature.name;
+    self.creatureText.text = self.creature.name;
     self.creatureText.hidden = YES;
+    self.editButtonToggled = NO;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -25,14 +27,21 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
+- (IBAction)onEditButtonPressed:(id)sender {
+    if (!self.editButtonToggled) {
+        [sender setTitle:@"Done" forState:UIControlStateNormal];
+        self.editButtonToggled = YES;
+        self.creatureLabel.hidden = YES;
+        self.creatureText.hidden = NO;
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    }else{
+        [sender setTitle:@"Edit" forState:UIControlStateNormal];
+        self.editButtonToggled = NO;
+        self.creatureLabel.hidden = NO;
+        self.creatureLabel.text = self.creatureText.text;
+        self.creature.name = self.creatureText.text;
+        self.creatureText.hidden = YES;
+    }
 }
-*/
 
 @end

@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MagicalCreature.h"
 
 @interface CreatureViewController : UIViewController
 
-@property (strong, nonatomic) NSString *creatureString;
 @property (strong, nonatomic) IBOutlet UILabel *creatureLabel;
 @property (strong, nonatomic) IBOutlet UITextField *creatureText;
+
+@property (strong, nonatomic) MagicalCreature *creature;
+@property BOOL editButtonToggled;
 
 @end

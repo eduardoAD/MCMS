@@ -47,6 +47,7 @@
 
     return cell;
 }
+
 - (IBAction)onAddButtonPressed:(id)sender {
     if (![self.creatureTextField.text isEqualToString:@""]) {
         MagicalCreature *creature = [[MagicalCreature alloc] init];
@@ -61,11 +62,16 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"ShowCreatureSegue"] ) {
-        NSIndexPath *indexPath = [self.myTableView indexPathForSelectedRow];
         CreatureViewController *destinationViewController = segue.destinationViewController;
+
+        NSIndexPath *indexPath = [self.myTableView indexPathForSelectedRow];
         MagicalCreature *creatureSelected = [self.creatures objectAtIndex:indexPath.row];
-        destinationViewController.creatureString = creatureSelected.name;
+
+        destinationViewController.creature = creatureSelected;
     }
 }
 
+- (void)didMoveToParentViewController:(UIViewController *)parent{
+    [self.myTableView reloadData];
+}
 @end
