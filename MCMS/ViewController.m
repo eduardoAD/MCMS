@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "MagicalCreature.h"
+#import "CreatureViewController.h"
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 @property NSMutableArray *creatures;
@@ -60,9 +61,10 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"ShowCreatureSegue"] ) {
-        //NSLog(@"Sender: %@",sender);
-        UIViewController *destinationViewController = segue.destinationViewController;
-        destinationViewController.title = [sender text];
+        NSIndexPath *indexPath = [self.myTableView indexPathForSelectedRow];
+        CreatureViewController *destinationViewController = segue.destinationViewController;
+        MagicalCreature *creatureSelected = [self.creatures objectAtIndex:indexPath.row];
+        destinationViewController.creatureString = creatureSelected.name;
     }
 }
 

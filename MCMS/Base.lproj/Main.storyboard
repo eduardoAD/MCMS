@@ -75,10 +75,10 @@
             </objects>
             <point key="canvasLocation" x="1117" y="380"/>
         </scene>
-        <!--View Controller-->
+        <!--Creature View Controller-->
         <scene sceneID="eoh-XZ-nWJ">
             <objects>
-                <viewController id="5jm-OT-9ix" sceneMemberID="viewController">
+                <viewController id="5jm-OT-9ix" customClass="CreatureViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TyT-sb-Cbx"/>
                         <viewControllerLayoutGuide type="bottom" id="9Sy-lr-99Y"/>
@@ -86,8 +86,31 @@
                     <view key="view" contentMode="scaleToFill" id="7AF-hf-EkE">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="af4-0b-MTw">
+                                <rect key="frame" x="16" y="85" width="247" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xIS-Tv-hGt">
+                                <rect key="frame" x="16" y="85" width="253" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73a-8y-O0C">
+                                <rect key="frame" x="277" y="83" width="30" height="30"/>
+                                <state key="normal" title="Edit">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="creatureLabel" destination="af4-0b-MTw" id="phH-TZ-NDi"/>
+                        <outlet property="creatureText" destination="xIS-Tv-hGt" id="ZYs-LV-eWX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PCB-n9-FYD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

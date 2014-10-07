@@ -10,4 +10,8 @@
 
 @interface CreatureViewController : UIViewController
 
+@property (strong, nonatomic) NSString *creatureString;
+@property (strong, nonatomic) IBOutlet UILabel *creatureLabel;
+@property (strong, nonatomic) IBOutlet UITextField *creatureText;
+
 @end
