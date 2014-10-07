@@ -26,6 +26,9 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nh5-CE-xZx" id="I2V-53-KsN">
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="5jm-OT-9ix" kind="show" identifier="ShowCreatureSegue" id="vlu-oI-BPi"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -71,6 +74,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1117" y="380"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="eoh-XZ-nWJ">
+            <objects>
+                <viewController id="5jm-OT-9ix" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TyT-sb-Cbx"/>
+                        <viewControllerLayoutGuide type="bottom" id="9Sy-lr-99Y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7AF-hf-EkE">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PCB-n9-FYD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1857" y="380"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jWi-Mj-s3R">

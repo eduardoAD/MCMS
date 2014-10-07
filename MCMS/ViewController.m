@@ -58,5 +58,12 @@
     }
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"ShowCreatureSegue"] ) {
+        //NSLog(@"Sender: %@",sender);
+        UIViewController *destinationViewController = segue.destinationViewController;
+        destinationViewController.title = [sender text];
+    }
+}
 
 @end
