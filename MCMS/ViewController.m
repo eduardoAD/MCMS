@@ -7,16 +7,24 @@
 //
 
 #import "ViewController.h"
+#import "MagicalCreature.h"
 
 @interface ViewController ()
-
+@property NSMutableArray *creatures;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    MagicalCreature *pegasusCreature = [[MagicalCreature alloc]init];
+    pegasusCreature.name = @"Pegasus";
+
+    MagicalCreature *trollCreature = [[MagicalCreature alloc]init];
+    trollCreature.name = @"Troll";
+
+    MagicalCreature *cerberusCreature = [[MagicalCreature alloc]init];
+    cerberusCreature.name = @"Cerberus";
 }
 
 - (void)didReceiveMemoryWarning {

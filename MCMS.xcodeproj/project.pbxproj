@@ -14,6 +14,7 @@
 		E4DE08A719E46B7D00A59E05 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4DE08A619E46B7D00A59E05 /* Images.xcassets */; };
 		E4DE08AA19E46B7D00A59E05 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4DE08A819E46B7D00A59E05 /* LaunchScreen.xib */; };
 		E4DE08B619E46B7D00A59E05 /* MCMSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DE08B519E46B7D00A59E05 /* MCMSTests.m */; };
+		E4DE08C119E46BA700A59E05 /* MagicalCreature.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DE08C019E46BA700A59E05 /* MagicalCreature.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		E4DE08AF19E46B7D00A59E05 /* MCMSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MCMSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4DE08B419E46B7D00A59E05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4DE08B519E46B7D00A59E05 /* MCMSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCMSTests.m; sourceTree = "<group>"; };
+		E4DE08BF19E46BA700A59E05 /* MagicalCreature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicalCreature.h; sourceTree = "<group>"; };
+		E4DE08C019E46BA700A59E05 /* MagicalCreature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicalCreature.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,8 @@
 				E4DE08A619E46B7D00A59E05 /* Images.xcassets */,
 				E4DE08A819E46B7D00A59E05 /* LaunchScreen.xib */,
 				E4DE089919E46B7D00A59E05 /* Supporting Files */,
+				E4DE08BF19E46BA700A59E05 /* MagicalCreature.h */,
+				E4DE08C019E46BA700A59E05 /* MagicalCreature.m */,
 			);
 			path = MCMS;
 			sourceTree = "<group>";
@@ -220,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4DE08A219E46B7D00A59E05 /* ViewController.m in Sources */,
+				E4DE08C119E46BA700A59E05 /* MagicalCreature.m in Sources */,
 				E4DE089F19E46B7D00A59E05 /* AppDelegate.m in Sources */,
 				E4DE089C19E46B7D00A59E05 /* main.m in Sources */,
 			);
