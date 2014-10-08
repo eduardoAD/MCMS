@@ -25,6 +25,7 @@
     self.detailText.hidden = YES;
 
     self.editButtonToggled = NO;
+    self.imageView.image = self.creature.image;
 }
 
 - (void)didReceiveMemoryWarning {

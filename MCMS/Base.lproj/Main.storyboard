@@ -132,6 +132,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K77-fA-ip5">
+                                <rect key="frame" x="16" y="167" width="253" height="142"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -140,6 +143,7 @@
                         <outlet property="creatureText" destination="xIS-Tv-hGt" id="ZYs-LV-eWX"/>
                         <outlet property="detailLabel" destination="82l-Fs-fzR" id="d7i-mQ-sIW"/>
                         <outlet property="detailText" destination="vc7-dK-Ssa" id="Tne-NC-z2W"/>
+                        <outlet property="imageView" destination="K77-fA-ip5" id="d9D-ha-4qP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PCB-n9-FYD" userLabel="First Responder" sceneMemberID="firstResponder"/>

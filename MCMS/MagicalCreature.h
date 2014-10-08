@@ -6,10 +6,11 @@
 //  Copyright (c) 2014 Globant. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface MagicalCreature : NSObject
 @property NSString *name;
 @property NSString *detail;
+@property UIImage *image;
 
 @end

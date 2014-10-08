@@ -21,14 +21,17 @@
     MagicalCreature *pegasusCreature = [[MagicalCreature alloc]init];
     pegasusCreature.name = @"Pegasus";
     pegasusCreature.detail = @"Air";
+    pegasusCreature.image = [UIImage imageNamed:@"pegasus"];
 
     MagicalCreature *trollCreature = [[MagicalCreature alloc]init];
     trollCreature.name = @"troll";
     trollCreature.detail = @"Earth";
+    trollCreature.image = [UIImage imageNamed:@"troll"];
 
     MagicalCreature *cerberusCreature = [[MagicalCreature alloc]init];
     cerberusCreature.name = @"Cerberus";
     cerberusCreature.detail = @"Inferno";
+    cerberusCreature.image = [UIImage imageNamed:@"cerberus"];
 
     self.creatures = [[NSMutableArray alloc] initWithObjects:pegasusCreature, trollCreature, cerberusCreature, nil];
 }
@@ -57,6 +60,7 @@
         MagicalCreature *creature = [[MagicalCreature alloc] init];
         creature.name = [self.creatureTextField text];
         creature.detail = @"none";
+        creature.image = [UIImage imageNamed:@"creature"];
 
         [self.creatures addObject:creature];
 
