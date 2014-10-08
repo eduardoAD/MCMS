@@ -16,6 +16,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *detailLabel;
 @property (strong, nonatomic) IBOutlet UITextField *detailText;
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) IBOutlet UITableView *accesoriesTableView;
 
 @property (strong, nonatomic) MagicalCreature *creature;
 @property BOOL editButtonToggled;

@@ -135,10 +135,28 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K77-fA-ip5">
                                 <rect key="frame" x="16" y="167" width="253" height="142"/>
                             </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="UbP-wh-scD">
+                                <rect key="frame" x="16" y="324" width="300" height="262"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="accesorieCellID" id="OMU-1k-h1i">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OMU-1k-h1i" id="aF7-FN-Dk2">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="5jm-OT-9ix" id="9QD-az-GwY"/>
+                                    <outlet property="delegate" destination="5jm-OT-9ix" id="zX6-ic-BAj"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="accesoriesTableView" destination="UbP-wh-scD" id="O6F-oS-gfF"/>
                         <outlet property="creatureLabel" destination="af4-0b-MTw" id="phH-TZ-NDi"/>
                         <outlet property="creatureText" destination="xIS-Tv-hGt" id="ZYs-LV-eWX"/>
                         <outlet property="detailLabel" destination="82l-Fs-fzR" id="d7i-mQ-sIW"/>

@@ -8,7 +8,7 @@
 
 #import "CreatureViewController.h"
 
-@interface CreatureViewController ()
+@interface CreatureViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @end
 
@@ -58,6 +58,18 @@
         self.creatureText.hidden = YES;
         self.detailText.hidden = YES;
     }
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.creature.accesories.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"accesorieCellID" forIndexPath:indexPath];
+
+    cell.textLabel.text = [self.creature.accesories objectAtIndex:indexPath.row];
+
+    return cell;
 }
 
 @end
